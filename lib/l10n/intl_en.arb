@@ -1,0 +1,13 @@
+{
+  "login": "LOGIN",
+  "register": "REGISTER",
+  "emailAddress": "EMAIL ADDRESS",
+  "youyouremailcom": "you@youremail.com",
+  "password_hint": "PASSWORD (6 characters minimum)",
+  "forgotYourPassword": "Forgot your password?",
+  "addPhoto": "ADD PHOTO",
+  "yourName": "YOUR NAME",
+  "egStephenKing": "e.g. Stephen King",
+  "password6CharactersMinimum": "PASSWORD (6 characters minimum)",
+  "needHelp": "Need help?"
+}

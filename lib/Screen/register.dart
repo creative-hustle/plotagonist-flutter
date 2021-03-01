@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
 import 'package:plotagonist/Screen/login.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -46,7 +47,7 @@ class NewForm extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  "LOGIN",
+                  S.of(context).login,
                   style: TextStyle(
                     color: Color(
                       0xff4c4c4c,
@@ -61,7 +62,7 @@ class NewForm extends StatelessWidget {
                 width: ScreenUtil().setWidth(28),
               ),
               Text(
-                "REGISTER",
+                S.of(context).register,
                 style: TextStyle(
                   color: Color(
                     0xffed8a19,
@@ -92,7 +93,7 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(28),
                   child: Center(
                     child: Text(
-                      "ADD PHOTO",
+                      S.of(context).addPhoto,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: ScreenUtil().setSp(12),
@@ -123,7 +124,7 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "YOUR NAME",
+                    S.of(context).yourName,
                     style: TextStyle(
                       color: Color(
                         0xffed8a19,
@@ -145,7 +146,7 @@ class NewForm extends StatelessWidget {
                       letterSpacing: 0.5538461208343506,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'e.g. Stephen King',
+                      hintText: S.of(context).egStephenKing,
                       hintStyle: TextStyle(
                         color: Color(
                           0xffababab,
@@ -179,7 +180,7 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "EMAIL ADDRESS",
+                    S.of(context).emailAddress,
                     style: TextStyle(
                       color: Color(
                         0xffed8a19,
@@ -201,7 +202,7 @@ class NewForm extends StatelessWidget {
                       letterSpacing: 0.5538461208343506,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'you@youremail.com',
+                      hintText: S.of(context).youyouremailcom,
                       hintStyle: TextStyle(
                         color: Color(
                           0xffababab,
@@ -235,7 +236,7 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "PASSWORD (6 characters minimum)",
+                    S.of(context).password6CharactersMinimum,
                     style: TextStyle(
                       color: Color(
                         0xffed8a19,
@@ -300,7 +301,7 @@ class NewForm extends StatelessWidget {
                       onPressed: () {},
                       minWidth: ScreenUtil().setWidth(134),
                       child: Text(
-                        "REGISTER",
+                        S.of(context).register,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: ScreenUtil()
@@ -323,7 +324,7 @@ class NewForm extends StatelessWidget {
                     onPressed: () {},
                     height: ScreenUtil().setHeight(30),
                     child: Text(
-                      "Need help?",
+                      S.of(context).needHelp,
                       style: TextStyle(
                         color: Color(
                           0xff4c4c4c,

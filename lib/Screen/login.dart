@@ -6,6 +6,7 @@ import 'package:plotagonist/Screen/choose_muse_screen.dart';
 import 'package:plotagonist/Screen/finish_social_register.dart';
 import 'package:plotagonist/Screen/forgot_password.dart';
 import 'package:plotagonist/Screen/register.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -43,7 +44,7 @@ class NewForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "LOGIN",
+                S.of(context).login,
                 style: TextStyle(
                   color: Color(
                     0xffed8a19,
@@ -68,7 +69,7 @@ class NewForm extends StatelessWidget {
                   );
                 },
                 child: Text(
-                  "REGISTER",
+                  S.of(context).register,
                   style: TextStyle(
                     color: Color(
                       0xff4c4c4c,
@@ -119,7 +120,7 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "EMAIL ADDRESS",
+                    S.of(context).emailAddress,
                     style: TextStyle(
                       color: Color(
                         0xffed8a19,
@@ -141,7 +142,7 @@ class NewForm extends StatelessWidget {
                       letterSpacing: 0.5538461208343506,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'you@youremail.com',
+                      hintText: S.of(context).youyouremailcom,
                       hintStyle: TextStyle(
                         color: Color(
                           0xffababab,
@@ -175,7 +176,7 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "PASSWORD (6 characters minimum)",
+                    S.of(context).password_hint,
                     style: TextStyle(
                       color: Color(
                         0xffed8a19,
@@ -277,7 +278,7 @@ class NewForm extends StatelessWidget {
                     },
                     height: ScreenUtil().setHeight(30),
                     child: Text(
-                      "Forgot your password?",
+                      S.of(context).forgotYourPassword,
                       style: TextStyle(
                         color: Color(
                           0xff4c4c4c,

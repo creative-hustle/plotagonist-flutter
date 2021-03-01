@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/screenutil_init.dart';
 import 'package:plotagonist/Screen/HomeScreen.dart';
 import 'package:plotagonist/Screen/splash.dart';
 import 'package:plotagonist/Utils/styling.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 import 'Utils/size_config.dart';
 
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
             builder: (context, orientation) {
               SizeConfig().init(constraints, orientation);
               return MaterialApp(
+                localizationsDelegates: [S.delegate],
+                supportedLocales: S.delegate.supportedLocales,
                 theme: ThemeData(
                   accentColor: AppTheme.appBarCoin,
                 ),
