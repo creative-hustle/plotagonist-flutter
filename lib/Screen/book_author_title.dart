@@ -51,27 +51,31 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
               },
               child: Text(
                 S.of(context).cancel,
-                style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
+                style: GoogleFonts.lato(
+                    color: AppTheme.txtappBar,
+                    fontSize: 17.sp,
+                    letterSpacing: 0.5),
               ),
             ),
           ],
         ),
         middle: Text(
           S.of(context).createNewPlot,
-          style: GoogleFonts.lato(color: Colors.black, fontSize: 17.sp,letterSpacing: 0.5),
+          style: GoogleFonts.lato(
+              color: Colors.black, fontSize: 17.sp, letterSpacing: 0.5),
         ),
         trailing: GestureDetector(
           child: Text(
             S.of(context).save,
-            style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
+            style: GoogleFonts.lato(
+                color: AppTheme.txtappBar, fontSize: 17.sp, letterSpacing: 0.5),
           ),
           onTap: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (_) => BookWallpaper(
-                        _authorController.text,
-                        _titleController.text)));
+                        _authorController.text, _titleController.text)));
           },
         ),
       ),
@@ -128,10 +132,15 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                               ),
                               border: InputBorder.none,
                             ),
+                            onChanged: (value) {
+                              setState(() {
+                                color = Colors.transparent;
+                              });
+                            },
                             onEditingComplete: () {
                               setState(() {
-                                color2 = color;
-                                color = Colors.transparent;
+                                color2 = Color.fromRGBO(37, 162, 240, 0.42);
+                               // color = Colors.transparent;
                               });
                               FocusScope.of(context).nextFocus();
                             }),
@@ -141,6 +150,11 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                       color: color2,
                       child: IntrinsicWidth(
                         child: TextFormField(
+                            onChanged: (value) {
+                              setState(() {
+                                color2 = Colors.transparent;
+                              });
+                            },
                             controller: _titleController,
                             style: GoogleFonts.lato(
                                 color: Colors.white,
@@ -150,7 +164,7 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                             decoration: InputDecoration(
                               isDense: true,
                               hintText: S.of(context).bookTitle,
-                              hintStyle:  GoogleFonts.lato(
+                              hintStyle: GoogleFonts.lato(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w900,
                                   fontSize: 32.sp,
