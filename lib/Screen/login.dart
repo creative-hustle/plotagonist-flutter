@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/HomeScreen.dart';
 import 'package:plotagonist/Screen/choose_muse_screen.dart';
 import 'package:plotagonist/Screen/finish_social_register.dart';
@@ -45,7 +46,7 @@ class NewForm extends StatelessWidget {
             children: [
               Text(
                 S.of(context).login,
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   color: Color(
                     0xffed8a19,
                   ),
@@ -70,7 +71,7 @@ class NewForm extends StatelessWidget {
                 },
                 child: Text(
                   S.of(context).register,
-                  style: TextStyle(
+                  style: GoogleFonts.lato(
                     color: Color(
                       0xff4c4c4c,
                     ),
@@ -121,13 +122,12 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(24),
                   child: Text(
                     S.of(context).emailAddress,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
                     ),
                   ),
                 ),
@@ -135,22 +135,20 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(30),
                   child: TextFormField(
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
                       hintText: S.of(context).youyouremailcom,
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -177,13 +175,12 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(24),
                   child: Text(
                     S.of(context).password_hint,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
                     ),
                   ),
                 ),
@@ -191,23 +188,21 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(30),
                   child: TextFormField(
                     obscureText: true,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                     maxLines: 1,
                     decoration: InputDecoration(
                       hintText: '•••••••••',
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -246,13 +241,12 @@ class NewForm extends StatelessWidget {
                       },
                       minWidth: ScreenUtil().setWidth(134),
                       child: Text(
-                        "LOG IN",
-                        style: TextStyle(
+                        S.of(context).logInBtn,
+                        style: GoogleFonts.lato(
                           color: Colors.white,
                           fontSize: ScreenUtil()
                               .setSp(15, allowFontScalingSelf: false),
                           fontWeight: FontWeight.w400,
-                          fontFamily: "Lato",
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -267,26 +261,25 @@ class NewForm extends StatelessWidget {
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     padding: EdgeInsets.all(0),
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => ForgotPassword()));
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ChooseMuse()));
+                              builder: (context) => ForgotPassword()));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => ChooseMuse()));
                     },
                     height: ScreenUtil().setHeight(30),
                     child: Text(
                       S.of(context).forgotYourPassword,
-                      style: TextStyle(
+                      style: GoogleFonts.lato(
                         color: Color(
                           0xff4c4c4c,
                         ),
                         fontSize: ScreenUtil().setSp(15),
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.italic,
-                        fontFamily: "Lato",
                       ),
                       textAlign: TextAlign.center,
                     ),

@@ -10,6 +10,7 @@ import 'package:plotagonist/Screen/forgot_password.dart';
 import 'package:plotagonist/Screen/register.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:plotagonist/Utils/styling.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ChooseMuse extends StatefulWidget {
   @override
@@ -56,7 +57,7 @@ class _NewFormState extends State<NewForm> {
                     height: 100.h,
                   ),
                   Text(
-                    'Choose your Muse',
+                    S.of(context).chooseYourMuse,
                     style: GoogleFonts.lato(
                         letterSpacing: 0.5,
                         fontSize: 22.sp,
@@ -67,7 +68,7 @@ class _NewFormState extends State<NewForm> {
                     height: 25.h,
                   ),
                   Text(
-                    'Your Muse will guide you through the setup of your plot and will make sure that you reach the finish line and help you along the way.',
+                    S.of(context).yourMuseInstructions,
                     style: GoogleFonts.lora(
                         letterSpacing: 0.5,
                         fontSize: 14.sp,

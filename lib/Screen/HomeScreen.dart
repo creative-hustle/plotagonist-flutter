@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Models/dashboard_list.dart';
 import 'package:plotagonist/Screen/book_author_title.dart';
 import 'package:plotagonist/Utils/styling.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       scrollCount = 320.w;
       for (var item in dashboardList) {
-        if (item.title == "Your Plots") {
+        if (item.title == S.of(context).yourPlots) {
           item.selected = true;
         } else {
           item.selected = false;
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       scrollCount = 320.w * dashboardListData.length;
       for (var item in dashboardList) {
-        if (item.title == "Writing Prompts") {
+        if (item.title == S.of(context).writingPrompts) {
           item.selected = true;
         } else {
           item.selected = false;
@@ -47,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       scrollCount = 320.w * dashboardListData2.length;
       for (var item in dashboardList) {
-        if (item.title == "Invites") {
+        if (item.title == S.of(context).invites) {
           item.selected = true;
         } else {
           item.selected = false;
@@ -255,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         badgeColor: AppTheme.notifyColor,
                                         badgeContent: Text(''),
                                         child: Text(
-                                          'WRITING PROMPTS',
+                                          S.of(context).writingPrompts,
                                           style: GoogleFonts.lato(
                                               fontSize: 11.sp,
                                               color: AppTheme.txtColor,
@@ -296,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       badgeColor: AppTheme.notifyColor,
                                       badgeContent: Text(''),
                                       child: Text(
-                                        'INVITES ',
+                                        S.of(context).invites,
                                         style: GoogleFonts.lato(
                                             fontSize: 11.sp,
                                             color: AppTheme.txtColor,
@@ -340,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      index == 0 ? 'Your Plots' : '',
+                                      index == 0 ? S.of(context).yourPlots : '',
                                       style: GoogleFonts.lato(
                                           fontSize: 22.sp,
                                           fontWeight: FontWeight.w900,
@@ -490,7 +491,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      index == 0 ? 'Writing Prompts' : '',
+                                      index == 0 ? S.of(context).writingPrompts : '',
                                       style: GoogleFonts.lato(
                                           fontSize: 22.sp,
                                           fontWeight: FontWeight.w900,
@@ -510,7 +511,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Stack(
                                           children: [
                                             Container(
-                                              color: Colors.red,
+                                              color: Colors.white,
                                               child: Image(
                                                 height: 400.h,
                                                 width: 300.w,
@@ -691,7 +692,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      index == 0 ? 'Invites' : '',
+                                      index == 0 ? S.of(context).invites : '',
                                       style: GoogleFonts.lato(
                                           fontSize: 22.sp,
                                           fontWeight: FontWeight.bold,
@@ -711,7 +712,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Stack(
                                           children: [
                                             Container(
-                                              color: Colors.red,
+                                              color: Colors.white,
                                               child: Hero(
                                                 tag: "newImg",
                                                 child: Image(

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/send_invites.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class PlotSummary extends StatefulWidget {
   @override
@@ -31,7 +32,7 @@ class _PlotSummaryState extends State<PlotSummary> {
                 Navigator.pop(context);
               },
               child: Text(
-                'Cancel',
+                S.of(context).cancel,
                 style: GoogleFonts.lato(
                     color: AppTheme.txtappBar,
                     fontSize: 17.sp,
@@ -41,7 +42,7 @@ class _PlotSummaryState extends State<PlotSummary> {
           ],
         ),
         middle: Text(
-          'Plot Summary',
+          S.of(context).plotSummary,
           style: GoogleFonts.lato(
               color: Colors.black, fontSize: 17.sp, letterSpacing: 0.5),
         ),
@@ -79,7 +80,7 @@ class _PlotSummaryState extends State<PlotSummary> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'What’s your story about?',
+                                    S.of(context).whatsYourStoryTitle,
                                     style: GoogleFonts.lora(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14.sp,
@@ -90,7 +91,7 @@ class _PlotSummaryState extends State<PlotSummary> {
                                     height: 5.h,
                                   ),
                                   Text(
-                                    'Please try to summarise what your story is about. It’s important to have the core of your story early on, so you never lose track of your North Star. Think about it like the short summary at the back of the books you have read.',
+                                    S.of(context).whatsYourStorySubtitle,
                                     style: GoogleFonts.lora(
                                         fontSize: 12.sp,
                                         letterSpacing: 0.5,
@@ -176,7 +177,7 @@ class _PlotSummaryState extends State<PlotSummary> {
                       decoration: new InputDecoration(
                         contentPadding: EdgeInsets.symmetric(
                             vertical: 6.h, horizontal: 0.0),
-                        hintText: 'Please enter story summary',
+                        hintText: S.of(context).pleaseEnterStorySummary,
                         hintStyle: GoogleFonts.lato(
                             color: Colors.grey, fontSize: 16.sp),
                         fillColor: AppTheme.appBarCoin,
@@ -204,7 +205,7 @@ class _PlotSummaryState extends State<PlotSummary> {
                       color: AppTheme.appBarCoin,
                       border: Border.all(color: AppTheme.appBarCoin)),
                   child: Text(
-                    'NEXT STEP',
+                    S.of(context).nextStep,
                     style: GoogleFonts.lato(
                       fontSize: 16.sp,
                       color: Colors.white,

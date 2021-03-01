@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class FinishRegister extends StatefulWidget {
   @override
@@ -34,8 +36,8 @@ class NewForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "SOCIAL REGISTER",
-                style: TextStyle(
+                S.of(context).socialRegister,
+                style: GoogleFonts.lato(
                   color: Color(
                     0xffed8a19,
                   ),
@@ -65,8 +67,8 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(28),
                   child: Center(
                     child: Text(
-                      "ADD PHOTO",
-                      style: TextStyle(
+                      S.of(context).addPhoto,
+                      style: GoogleFonts.lato(
                         color: Colors.white,
                         fontSize: ScreenUtil().setSp(12),
                         fontWeight: FontWeight.w400,
@@ -96,14 +98,14 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "YOUR NAME",
-                    style: TextStyle(
+                    S.of(context).yourName,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
+
                     ),
                   ),
                 ),
@@ -111,22 +113,22 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(30),
                   child: TextFormField(
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'e.g. Stephen King',
-                      hintStyle: TextStyle(
+                      hintText: S.of(context).egStephenKing,
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -152,14 +154,14 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "EMAIL ADDRESS",
-                    style: TextStyle(
+                    S.of(context).emailAddress,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
+
                     ),
                   ),
                 ),
@@ -167,22 +169,22 @@ class NewForm extends StatelessWidget {
                   height: ScreenUtil().setHeight(30),
                   child: TextFormField(
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'you@youremail.com',
-                      hintStyle: TextStyle(
+                      hintText: S.of(context).youyouremailcom,
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -221,14 +223,14 @@ class NewForm extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Text(
 
-                        "FINISH REGISTRATION",
-                        style: TextStyle(
+                        S.of(context).finishRegistration,
+                        style: GoogleFonts.lato(
 
                           color: Colors.white,
                           fontSize: ScreenUtil()
                               .setSp(15, allowFontScalingSelf: false),
                           fontWeight: FontWeight.w400,
-                          fontFamily: "Lato",
+
 
                         ),
                         textAlign: TextAlign.center,

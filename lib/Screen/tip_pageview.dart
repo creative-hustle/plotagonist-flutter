@@ -4,6 +4,7 @@ import 'package:plotagonist/Screen/slider.dart';
 import 'package:plotagonist/Screen/start_screen.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class TipPageView extends StatefulWidget {
   @override
@@ -13,33 +14,10 @@ class TipPageView extends StatefulWidget {
 class _TipPageViewState extends State<TipPageView> {
   int _currentPage = 0;
   PageController _controller = PageController();
+  
+  
 
-  List<Widget> _pages = [
-    SliderPage(
-        title: "Start With An Outline",
-        description:
-            "Outline briefly what each chapter will be about. Then dig deep and add bulletpoint level detail to each chapter, "
-            "so when you are writing your draft, you always know what’s next."),
-    SliderPage(
-      title: "Keep It in Order",
-      description:
-          "Tap to create, or drag the orange button to a specific spot to add your your entry or chapter there. "
-          "If you change your mind later, just drag any entry to a different spot to reorder, "
-          "using the little handle on their left.",
-    ),
-    SliderPage(
-      title: "Retain Every Version",
-      description:
-          "Each chapter and entry has multiple states. The default 3 are Outline, Draft and Edited, but you can add up to 20 states to each entry."
-          "If you want to create a chapter, simply give it a title, or leave the title empty to create an entry.",
-    ),
-    SliderPage(
-      title: "Use Tags",
-      description:
-          "Use @ and # in your entries to create cards and collect your research and allocate attached media,"
-          " having your own twitter-like microverse within each of your plots. VIP members can also export cards.",
-    ),
-  ];
+ 
 
   _onchanged(int index) {
     setState(() {
@@ -49,6 +27,29 @@ class _TipPageViewState extends State<TipPageView> {
 
   @override
   Widget build(BuildContext context) {
+
+    List<Widget> _pages = [
+      SliderPage(
+          title: S.of(context).sliderPage1Title,
+          description:
+          S.of(context).sliderPage1Subtitle),
+      SliderPage(
+        title: S.of(context).sliderPage2Title,
+        description:
+        S.of(context).sliderPage2Subtitle,
+      ),
+      SliderPage(
+        title: S.of(context).sliderPage3Title,
+        description:
+        S.of(context).sliderPage3Subtitle,
+      ),
+      SliderPage(
+        title: S.of(context).sliderPage4Title,
+        description:
+        S.of(context).sliderPage4Subtitle,
+      ),
+    ];
+    
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -106,14 +107,14 @@ class _TipPageViewState extends State<TipPageView> {
                         color: AppTheme.floatingColor,
                         child: (_currentPage == (_pages.length - 1))
                             ? Text(
-                                "START WRITING",
+                                S.of(context).startWriting,
                                 style: GoogleFonts.lato(
                                   color: Colors.white,
                                   fontSize: 16.sp,
                                 ),
                               )
                             : Text(
-                                "NEXT TIP",
+                                S.of(context).nextTip,
                                 style: GoogleFonts.lato(
                                   color: Colors.white,
                                   fontSize: 16.sp,

@@ -6,6 +6,7 @@ import 'package:plotagonist/Screen/allocate_media.dart';
 import 'package:plotagonist/Utils/size_config.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class AddNew extends StatefulWidget {
   @override
@@ -49,14 +50,14 @@ class _AddNewState extends State<AddNew> {
                       title: Column(
                         children: [
                           Text(
-                            'Add attachment',
+                            S.of(context).addAttachment,
                             style: GoogleFonts.lato(
                               fontSize: 17.sp,
                                 fontWeight: FontWeight.w800, color: Colors.black),
                           ),
                           SizedBox(height: 10.h,),
                           Text(
-                            'Please select the location of the media you want to attach',
+                            S.of(context).pleaseSelectTheLocationOfTheMediaYouWantTo,
                             style:  GoogleFonts.lato(color: Colors.black, fontSize: 13.sp,),
                           )
                         ],
@@ -68,7 +69,7 @@ class _AddNewState extends State<AddNew> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Camera',
+                              S.of(context).camera,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp,
                                   color: Colors.blue,
@@ -79,7 +80,7 @@ class _AddNewState extends State<AddNew> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Media Library',
+                              S.of(context).mediaLibrary,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp,
                                   color: Colors.blue,
@@ -90,7 +91,7 @@ class _AddNewState extends State<AddNew> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Files',
+                              S.of(context).files,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp,
                                   color: Colors.blue,
@@ -101,7 +102,7 @@ class _AddNewState extends State<AddNew> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Unsplash Photos',
+                              S.of(context).unsplashPhotos,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp,
                                   color: Colors.blue,
@@ -112,7 +113,7 @@ class _AddNewState extends State<AddNew> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              'Cancel',
+                              S.of(context).cancel,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp,
                                   color: Colors.blue,
@@ -141,7 +142,7 @@ class _AddNewState extends State<AddNew> {
                 Navigator.pop(context);
               },
               child: Text(
-                'Cancel',
+                S.of(context).cancel,
                 style: GoogleFonts.lato(
                     color: AppTheme.txtappBar,
                     fontSize: 17.sp,
@@ -151,7 +152,7 @@ class _AddNewState extends State<AddNew> {
           ],
         ),
         middle: Text(
-          'Add New',
+          S.of(context).addNew,
           style: GoogleFonts.lato(
               color: Colors.black, fontSize: 17.sp, letterSpacing: 0.5),
         ),
@@ -161,7 +162,7 @@ class _AddNewState extends State<AddNew> {
                 context, MaterialPageRoute(builder: (_) => AllocateMedia()));
           },
           child: Text(
-            'Save',
+            S.of(context).save,
             style: GoogleFonts.lato(
                 color: AppTheme.txtappBar, fontSize: 17.sp, letterSpacing: 0.5),
           ),
@@ -183,7 +184,7 @@ class _AddNewState extends State<AddNew> {
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 0.0),
                       hintText:
-                          'Add Title to create chapter, use # for automatic numbering',
+                          S.of(context).addTitleToCreateChapterUseForAutomaticNumbering,
                       hintStyle: GoogleFonts.lato(
                         color: Colors.grey,
                         fontSize: 17.0.sp,
@@ -223,7 +224,7 @@ class _AddNewState extends State<AddNew> {
                         ],
                       ),
                       child: Text(
-                        'OUTLINE',
+                        S.of(context).outline,
                         style: GoogleFonts.lato(
                             color: AppTheme.appBarCoin, fontSize: 12.sp),
                       ),
@@ -250,7 +251,7 @@ class _AddNewState extends State<AddNew> {
                         ],
                       ),
                       child: Text(
-                        'DRAFT',
+                        S.of(context).draft,
                         style: GoogleFonts.lato(
                             color: AppTheme.txtColor, fontSize: 12.sp),
                       ),
@@ -277,7 +278,7 @@ class _AddNewState extends State<AddNew> {
                         ],
                       ),
                       child: Text(
-                        'EDITED',
+                        S.of(context).edited,
                         style: GoogleFonts.lato(
                             color: AppTheme.txtColor, fontSize: 12.sp),
                       ),
@@ -303,7 +304,7 @@ class _AddNewState extends State<AddNew> {
                     contentPadding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 0.0),
                     hintText:
-                        'Press next, previous or add new below to continue writing, your entry will automatically be saved.',
+                        S.of(context).titleInstructions,
                     hintStyle: GoogleFonts.lato(
                       color: Colors.grey,
                       fontSize: 13.sp,

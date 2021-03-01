@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/Add_new.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class StartScreen extends StatefulWidget {
   final val;
@@ -54,9 +55,10 @@ class _StartScreenState extends State<StartScreen> {
                 image: AssetImage('assets/images/ellips.png'),
                 fit: BoxFit.contain,
               ),
-              title: 'Your Muse'),
+              title: S.of(context).yourMuse),
         ],
-        initialActiveIndex: 1, //optional, default as 0
+        initialActiveIndex: 1,
+        //optional, default as 0
         onTap: (int i) {
           if (i == 1) {
             Navigator.push(
@@ -206,7 +208,7 @@ class _StartScreenState extends State<StartScreen> {
                                       width: 7.2.h,
                                     ),
                                     Text(
-                                      'Empty Streets',
+                                      S.of(context).emptyStreets,
                                       style: GoogleFonts.lato(fontSize: 14.sp),
                                     ),
                                   ],
@@ -223,7 +225,7 @@ class _StartScreenState extends State<StartScreen> {
                                       width: 7.2.h,
                                     ),
                                     Text(
-                                      'Summary',
+                                      S.of(context).summary,
                                       style: GoogleFonts.lato(fontSize: 14.sp),
                                     ),
                                   ],
@@ -250,7 +252,7 @@ class _StartScreenState extends State<StartScreen> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'A novel by',
+                                        S.of(context).aNovelBy,
                                         style: GoogleFonts.lato(
                                             color: AppTheme.txtColor,
                                             fontSize: 12.sp,
@@ -318,7 +320,7 @@ class _StartScreenState extends State<StartScreen> {
                                       Row(
                                         children: [
                                           Text(
-                                            'With special thanks to',
+                                            S.of(context).withSpecialThanksTo,
                                             style: GoogleFonts.lato(
                                                 color: AppTheme.txtColor,
                                                 fontSize: 12.sp,
@@ -352,12 +354,12 @@ class _StartScreenState extends State<StartScreen> {
                                                   children: [
                                                     Text(
                                                       'Brian Schuster',
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.lato(
                                                           fontSize: 12.sp),
                                                     ),
                                                     Text(
                                                       '@brianschuster',
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.lato(
                                                           color: AppTheme
                                                               .appBarCoin,
                                                           fontSize: 11.sp),
@@ -387,12 +389,12 @@ class _StartScreenState extends State<StartScreen> {
                                                   children: [
                                                     Text(
                                                       'Yuliya Fjodor',
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.lato(
                                                           fontSize: 12.sp),
                                                     ),
                                                     Text(
                                                       '@yuliyafjodor',
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.lato(
                                                           color: AppTheme
                                                               .appBarCoin,
                                                           fontSize: 11.sp),
@@ -408,7 +410,7 @@ class _StartScreenState extends State<StartScreen> {
                                         height: 18.h,
                                       ),
                                       Text(
-                                        'Summary',
+                                        S.of(context).summary,
                                         style: GoogleFonts.lato(
                                             color: AppTheme.txtColor,
                                             fontSize: 24.sp,
@@ -579,17 +581,17 @@ class _StartScreenState extends State<StartScreen> {
                                                                               children: [
                                                                                 Text(
                                                                                   'Jackie Willis',
-                                                                                  style: TextStyle(fontSize: 10.sp),
+                                                                                  style: GoogleFonts.lato(fontSize: 10.sp),
                                                                                 ),
                                                                                 Text(
                                                                                   ' @author',
-                                                                                  style: TextStyle(fontSize: 10.sp, color: AppTheme.appBarCoin),
+                                                                                  style: GoogleFonts.lato(fontSize: 10.sp, color: AppTheme.appBarCoin),
                                                                                 ),
                                                                               ],
                                                                             ),
                                                                             Text(
                                                                               '16:45 11/02/2019',
-                                                                              style: TextStyle(fontSize: 10.sp),
+                                                                              style: GoogleFonts.lato(fontSize: 10.sp),
                                                                             ),
                                                                           ],
                                                                         )

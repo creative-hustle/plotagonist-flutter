@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/genre_screen.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ShareScreen extends StatefulWidget {
   @override
@@ -63,7 +64,7 @@ class _ShareScreenState extends State<ShareScreen> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'What An Amazing Cover!',
+                            S.of(context).whatAnAmazingCover,
                             style: GoogleFonts.lato(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.w900,
@@ -73,7 +74,7 @@ class _ShareScreenState extends State<ShareScreen> {
                             height: 17.h,
                           ),
                           Text(
-                            'Share it with your friends, so they’ll know',
+                            S.of(context).shareItWithYourFriendsSoTheyllKnow,
                             style: GoogleFonts.lora(
                                 fontSize: 14.sp,
                                 color: AppTheme.txtColor,
@@ -83,7 +84,7 @@ class _ShareScreenState extends State<ShareScreen> {
                             height: 5.h,
                           ),
                           Text(
-                            'what you are working on.',
+                            S.of(context).whatYouAreWorkingOn,
                             style: GoogleFonts.lora(
                                 fontSize: 14.sp, color: AppTheme.txtColor),
                           ),
@@ -107,7 +108,7 @@ class _ShareScreenState extends State<ShareScreen> {
                                       width: 16.w,
                                     ),
                                     Text(
-                                      'SHARE',
+                                      S.of(context).share,
                                       style: GoogleFonts.lato(
                                           fontSize: 15.sp, color: Colors.black),
                                     ),
@@ -131,7 +132,7 @@ class _ShareScreenState extends State<ShareScreen> {
                                       width: 12.w,
                                     ),
                                     Text(
-                                      'TWEET',
+                                      S.of(context).tweet,
                                       style: GoogleFonts.lato(
                                           fontSize: 15.sp, color: Colors.black),
                                     ),
@@ -155,7 +156,7 @@ class _ShareScreenState extends State<ShareScreen> {
                                       horizontal: 15.w, vertical: 7.h),
                                   child: Center(
                                     child: Text(
-                                      'Save image to Camera Roll',
+                                      S.of(context).saveImageToCameraRoll,
                                       style: GoogleFonts.lato(
                                           fontSize: 16.sp, color: Colors.white),
                                     ),

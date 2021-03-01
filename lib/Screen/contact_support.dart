@@ -3,10 +3,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/register.dart';
 import 'package:plotagonist/Screen/reset_code.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ContactSupport extends StatefulWidget {
   @override
@@ -55,8 +57,8 @@ class _NewFormState extends State<NewForm> {
                   children: [
                     Align(
                       child: Text(
-                        "SUPPORT",
-                        style: TextStyle(
+                        S.of(context).support,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4c4c4c,
                           ),
@@ -85,8 +87,8 @@ class _NewFormState extends State<NewForm> {
                               width: 4.5.w,
                             ),
                             Text(
-                              "BACK",
-                              style: TextStyle(
+                              S.of(context).back,
+                              style: GoogleFonts.lato(
                                 color: Color(
                                   0xff4c4c4c,
                                 ),
@@ -129,15 +131,15 @@ class _NewFormState extends State<NewForm> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "If you have a customer service query, please get in touch using the below form. Please try to give as much information as possible so we can help you better. You’ll receive an answer via email in 2 business days.",
-                    style: TextStyle(
+                    S.of(context).contactInstructions,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xff4C4C4C,
                       ),
                       fontSize: ScreenUtil().setSp(15),
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.italic,
-                      fontFamily: "Lato",
+
                       height: 1.4,
                       letterSpacing: 0.5,
                     ),
@@ -162,14 +164,14 @@ class _NewFormState extends State<NewForm> {
                       Container(
                         height: ScreenUtil().setHeight(24),
                         child: Text(
-                          "EMAIL ADDRESS",
-                          style: TextStyle(
+                          S.of(context).emailAddress,
+                          style: GoogleFonts.lato(
                             color: Color(
                               0xffed8a19,
                             ),
                             fontSize: ScreenUtil().setSp(12),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
+
                           ),
                         ),
                       ),
@@ -177,21 +179,21 @@ class _NewFormState extends State<NewForm> {
                         height: ScreenUtil().setHeight(30),
                         child: TextFormField(
                           maxLines: 1,
-                          style: TextStyle(
+                          style: GoogleFonts.lato(
                             fontSize: ScreenUtil().setSp(16),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
-                            letterSpacing: 0.5538461208343506,
+
+                            letterSpacing: 0.5,
                           ),
                           decoration: InputDecoration(
-                            hintText: 'you@youremail.com',
-                            hintStyle: TextStyle(
+                            hintText: S.of(context).youyouremailcom,
+                            hintStyle: GoogleFonts.lato(
                               color: Color(
                                 0xffababab,
                               ),
                               fontSize: ScreenUtil().setSp(16),
                               fontWeight: FontWeight.w400,
-                              fontFamily: "Lato",
+
                               letterSpacing: 0.5,
                             ),
                             enabledBorder: new UnderlineInputBorder(
@@ -218,14 +220,14 @@ class _NewFormState extends State<NewForm> {
                       Container(
                         height: ScreenUtil().setHeight(24),
                         child: Text(
-                          "YOUR MESSAGE",
-                          style: TextStyle(
+                          S.of(context).yourMessage,
+                          style: GoogleFonts.lato(
                             color: Color(
                               0xffed8a19,
                             ),
                             fontSize: ScreenUtil().setSp(12),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
+
                           ),
                         ),
                       ),
@@ -236,21 +238,21 @@ class _NewFormState extends State<NewForm> {
                           //Normal textInputField will be displayed
                           maxLines: 5,
                           // when user presses enter it will adapt to it
-                          style: TextStyle(
+                          style: GoogleFonts.lato(
                             fontSize: ScreenUtil().setSp(16),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
-                            letterSpacing: 0.5538461208343506,
+
+                            letterSpacing: 0.5,
                           ),
                           decoration: InputDecoration(
-                            hintText: 'Please type your message',
-                            hintStyle: TextStyle(
+                            hintText: S.of(context).pleaseTypeYourMessage,
+                            hintStyle: GoogleFonts.lato(
                               color: Color(
                                 0xffababab,
                               ),
                               fontSize: ScreenUtil().setSp(16),
                               fontWeight: FontWeight.w400,
-                              fontFamily: "Lato",
+
                               letterSpacing: 0.5,
                             ),
                             enabledBorder: new UnderlineInputBorder(
@@ -297,13 +299,13 @@ class _NewFormState extends State<NewForm> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 15),
                               child: Text(
-                                "SEND MESSAGE",
-                                style: TextStyle(
+                                S.of(context).sendMessage,
+                                style: GoogleFonts.lato(
                                   color: Colors.white,
                                   fontSize: ScreenUtil()
                                       .setSp(15, allowFontScalingSelf: false),
                                   fontWeight: FontWeight.w400,
-                                  fontFamily: "Lato",
+
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -326,29 +328,29 @@ class _NewFormState extends State<NewForm> {
                         height: 50.h,
                       ),
                       Text(
-                        "Your message was sent successfully",
-                        style: TextStyle(
+                        S.of(context).yourMessageWasSentSuccessfully,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4C4C4C,
                           ),
                           fontSize: ScreenUtil().setSp(15),
                           fontWeight: FontWeight.w900,
-                          fontFamily: "Lato",
+
                           height: 1.4,
                           letterSpacing: 0.5,
                         ),
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        "Thank you for getting in touch with us. We’ll try our best to solve your issue as fast as possible. Please look out for an email in the next 2 business days.",
-                        style: TextStyle(
+                        S.of(context).supportSuccessInstructions,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4C4C4C,
                           ),
                           fontSize: ScreenUtil().setSp(15),
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.italic,
-                          fontFamily: "Lato",
+
                           height: 1.4,
                           letterSpacing: 0.5,
                         ),

@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:plotagonist/Screen/contact_support.dart';
 import 'package:plotagonist/Screen/register.dart';
 import 'package:plotagonist/Screen/reset_password.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ResetCode extends StatefulWidget {
   @override
@@ -61,8 +63,8 @@ class _NewFormState extends State<NewForm> {
                   children: [
                     Align(
                       child: Text(
-                        "RESET PASSWORD",
-                        style: TextStyle(
+                        S.of(context).resetPassword,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4c4c4c,
                           ),
@@ -91,8 +93,8 @@ class _NewFormState extends State<NewForm> {
                               width: 4.5.w,
                             ),
                             Text(
-                              "BACK",
-                              style: TextStyle(
+                              S.of(context).back,
+                              style: GoogleFonts.lato(
                                 color: Color(
                                   0xff4c4c4c,
                                 ),
@@ -135,17 +137,17 @@ class _NewFormState extends State<NewForm> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "After entering your reset code, you’ll be prompted to set up a new password.",
-                    style: TextStyle(
+                    S.of(context).resetCodeInstructions,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xff4C4C4C,
                       ),
                       fontSize: ScreenUtil().setSp(15),
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.italic,
-                      fontFamily: "Lato",
+
                       height: 1.4,
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                   ),
                   padding: EdgeInsets.symmetric(
@@ -165,14 +167,14 @@ class _NewFormState extends State<NewForm> {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "RESET CODE",
-                    style: TextStyle(
+                    S.of(context).resetCode,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
+
                     ),
                   ),
                 ),
@@ -182,22 +184,22 @@ class _NewFormState extends State<NewForm> {
                     keyboardType: TextInputType.number,
                     inputFormatters: [maskFormatter],
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
                       hintText: '00-00-00',
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -239,13 +241,13 @@ class _NewFormState extends State<NewForm> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Text(
-                          "RESET PASSWORD",
-                          style: TextStyle(
+                          S.of(context).resetPassword,
+                          style: GoogleFonts.lato(
                             color: Colors.white,
                             fontSize: ScreenUtil()
                                 .setSp(15, allowFontScalingSelf: false),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
+
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -258,16 +260,16 @@ class _NewFormState extends State<NewForm> {
                 ),
                 Center(
                   child: Text(
-                    "No email received?",
-                    style: TextStyle(
+                    S.of(context).noEmailReceived,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xff4C4C4C,
                       ),
                       fontSize: ScreenUtil().setSp(15),
                       fontWeight: FontWeight.w900,
-                      fontFamily: "Lato",
+
                       height: 1.4,
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                   ),
                 ),
@@ -279,31 +281,31 @@ class _NewFormState extends State<NewForm> {
                       children: [
                         TextSpan(
                           text:
-                              'Please make sure you have checked your spam and junk folders. If the email haven\'t arrived in 5 minutes, ',
-                          style: TextStyle(
+                              S.of(context).noEmailInstructions,
+                          style: GoogleFonts.lato(
                             color: Color(
                               0xff4C4C4C,
                             ),
                             fontSize: ScreenUtil().setSp(15),
                             fontWeight: FontWeight.w400,
                             fontStyle: FontStyle.italic,
-                            fontFamily: "Lato",
+
                             height: 1.4,
                             letterSpacing: 0.5,
                           ),
                         ),
                         TextSpan(
-                          text: 'click here to resend',
-                          style: new TextStyle(
+                          text: S.of(context).clickHereToResend,
+                          style:  GoogleFonts.lato(
                             color: Color(
                               0xffed8a19,
                             ),
                             fontSize: ScreenUtil().setSp(15),
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.italic,
-                            fontFamily: "Lato",
+
                             height: 1.4,
-                            letterSpacing: 0.5538461208343506,
+                            letterSpacing: 0.5,
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
@@ -329,29 +331,29 @@ class _NewFormState extends State<NewForm> {
                         children: [
                           TextSpan(
                             text:
-                                'Reset code incorrect, or expired. Please try again with the latest reset code. If all fails, please ',
-                            style: TextStyle(
+                                S.of(context).resetCodeError,
+                            style: GoogleFonts.lato(
                               color: Color(
                                 0xff4C4C4C,
                               ),
                               fontSize: ScreenUtil().setSp(15),
                               fontWeight: FontWeight.w400,
                               fontStyle: FontStyle.italic,
-                              fontFamily: "Lato",
+
                               height: 1.4,
                               letterSpacing: 0.5,
                             ),
                           ),
                           TextSpan(
-                            text: 'contact support.',
-                            style: new TextStyle(
+                            text: S.of(context).contactSupport,
+                            style:  GoogleFonts.lato(
                               color: Color(
                                 0xffed8a19,
                               ),
                               fontSize: ScreenUtil().setSp(15),
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.italic,
-                              fontFamily: "Lato",
+
                               height: 1.4,
                               letterSpacing: 0.5,
                             ),

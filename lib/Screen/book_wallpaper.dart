@@ -6,6 +6,7 @@ import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:plotagonist/Screen/share_screen.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class BookWallpaper extends StatefulWidget {
   final author;
@@ -108,7 +109,7 @@ class _BookWallpaperState extends State<BookWallpaper>
           ],
         ),
         middle: Text(
-          'Create New Plot',
+          S.of(context).createNewPlot,
           style: GoogleFonts.lato(
               color: Colors.black, fontSize: 18.sp, letterSpacing: 0.5),
         ),
@@ -139,8 +140,8 @@ class _BookWallpaperState extends State<BookWallpaper>
               Padding(
                 padding: EdgeInsets.only(top: 10.h),
                 child: Text(
-                  'Loading new cover image',
-                  style: TextStyle(color: Colors.white),
+                  S.of(context).loadingNewCoverImage,
+                  style: GoogleFonts.lato(color: Colors.white),
                 ),
               ),
             ],
@@ -181,7 +182,7 @@ class _BookWallpaperState extends State<BookWallpaper>
                         children: [
                           Text(
                             widget.author,
-                            style: TextStyle(
+                            style: GoogleFonts.lato(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16.sp,
@@ -211,7 +212,7 @@ class _BookWallpaperState extends State<BookWallpaper>
                         children: [
                           Text(
                             widget.title,
-                            style: TextStyle(
+                            style: GoogleFonts.lato(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 32.sp,
@@ -276,7 +277,7 @@ class _BookWallpaperState extends State<BookWallpaper>
                                       color: AppTheme.appBarColor),
                                   borderRadius: BorderRadius.circular(20.r),
                                 ),
-                                hintText: 'Empty Streets',
+                                hintText: S.of(context).emptyStreets,
                                 hintStyle: GoogleFonts.lato(
                                     fontSize: 13.sp, letterSpacing: 0.5),
                                 suffixIcon: Container(

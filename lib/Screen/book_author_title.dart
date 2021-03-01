@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/book_wallpaper.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class BookAuthorTitle extends StatefulWidget {
   @override
@@ -49,19 +50,19 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                 Navigator.pop(context);
               },
               child: Text(
-                'Cancel',
+                S.of(context).cancel,
                 style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
               ),
             ),
           ],
         ),
         middle: Text(
-          'Create New Plot',
+          S.of(context).createNewPlot,
           style: GoogleFonts.lato(color: Colors.black, fontSize: 17.sp,letterSpacing: 0.5),
         ),
         trailing: GestureDetector(
           child: Text(
-            'Save',
+            S.of(context).save,
             style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
           ),
           onTap: () {
@@ -118,7 +119,7 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                             autofocus: true,
                             decoration: InputDecoration(
                               isDense: true,
-                              hintText: 'AUTHOR NAME',
+                              hintText: S.of(context).authorName,
                               hintStyle: GoogleFonts.lato(
                                 color: AppTheme.txthint,
                                 fontWeight: FontWeight.bold,
@@ -148,7 +149,7 @@ class _BookAuthorTitleState extends State<BookAuthorTitle> {
                                 letterSpacing: 0.5),
                             decoration: InputDecoration(
                               isDense: true,
-                              hintText: 'Book Title',
+                              hintText: S.of(context).bookTitle,
                               hintStyle:  GoogleFonts.lato(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w900,

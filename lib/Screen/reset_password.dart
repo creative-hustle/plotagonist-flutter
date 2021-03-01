@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:plotagonist/Screen/register.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ResetPassword extends StatefulWidget {
   @override
@@ -27,8 +29,6 @@ class _ResetPasswordState extends State<ResetPassword> {
 }
 
 class NewForm extends StatelessWidget {
-  var maskFormatter = new MaskTextInputFormatter(
-      mask: '##-##-##', filter: {"#": RegExp(r'[0-9]')});
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +51,8 @@ class NewForm extends StatelessWidget {
                   children: [
                     Align(
                       child: Text(
-                        "RESET PASSWORD",
-                        style: TextStyle(
+                        S.of(context).resetPassword,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4c4c4c,
                           ),
@@ -81,8 +81,8 @@ class NewForm extends StatelessWidget {
                               width: 4.5.w,
                             ),
                             Text(
-                              "BACK",
-                              style: TextStyle(
+                              S.of(context).back,
+                              style: GoogleFonts.lato(
                                 color: Color(
                                   0xff4c4c4c,
                                 ),
@@ -126,17 +126,17 @@ class NewForm extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "Please set up your new password",
-                    style: TextStyle(
+                    S.of(context).pleaseSetUpYourNewPassword,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xff4C4C4C,
                       ),
                       fontSize: ScreenUtil().setSp(15),
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.italic,
-                      fontFamily: "Lato",
+
                       height: 1.4,
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                   ),
                   padding: EdgeInsets.symmetric(
@@ -156,14 +156,14 @@ class NewForm extends StatelessWidget {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "NEW PASSWORD (6 characters minimum)",
-                    style: TextStyle(
+                    S.of(context).newPassword6CharactersMinimum,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
+
                     ),
                   ),
                 ),
@@ -173,22 +173,22 @@ class NewForm extends StatelessWidget {
                     obscureText: true,
 
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
                       hintText: '•••••••••',
-                      hintStyle: TextStyle(
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
-                        letterSpacing: 0.5538461208343506,
+
+                        letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
                           borderSide: new BorderSide(
@@ -227,13 +227,13 @@ class NewForm extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Text(
-                          "SET UP NEW PASSWORD",
-                          style: TextStyle(
+                          S.of(context).setUpNewPassword,
+                          style: GoogleFonts.lato(
                             color: Colors.white,
                             fontSize: ScreenUtil()
                                 .setSp(15, allowFontScalingSelf: false),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
+
                           ),
                           textAlign: TextAlign.center,
                         ),

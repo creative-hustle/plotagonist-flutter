@@ -5,6 +5,7 @@ import 'package:plotagonist/Models/genre_model.dart';
 import 'package:plotagonist/Screen/sub_genre_screen.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class GenreScreen extends StatefulWidget {
   @override
@@ -50,7 +51,7 @@ class _GenreScreenState extends State<GenreScreen> {
             }
           },
           label: Text(
-            'NEXT STEP',
+            S.of(context).nextStep,
             style: GoogleFonts.lato(
                 fontSize: 16.sp,
                 color: _selectedIndex >= 0 ? Colors.white : Colors.grey,
@@ -69,14 +70,14 @@ class _GenreScreenState extends State<GenreScreen> {
                 Navigator.pop(context);
               },
               child: Text(
-                'Cancel',
+                S.of(context).cancel,
                 style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
               ),
             ),
           ],
         ),
         middle: Text(
-          'Choose Genre',
+          S.of(context).chooseGenre,
           style: GoogleFonts.lato(color: Colors.black, fontSize: 17.sp,letterSpacing: 0.5),
         ),
         trailing: GestureDetector(
@@ -85,7 +86,7 @@ class _GenreScreenState extends State<GenreScreen> {
                 context, MaterialPageRoute(builder: (_) => SubGenreScreen()));
           },
           child: Text(
-            'Skip',
+            S.of(context).skip,
             style: GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
           ),
         ),
@@ -104,12 +105,12 @@ class _GenreScreenState extends State<GenreScreen> {
                           child:   Container(
                             child: Container(
                               padding: EdgeInsets.only(
-                                  left: 14.w, top: 8.h, bottom: 10.h),
+                                  left: 14.w, top: 8.h, bottom: 10.h,right: 14.w,),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'What is the main genre of your plot?',
+                                    S.of(context).chooseGenreInstructionTitle,
                                     style: GoogleFonts.lora(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14.sp,
@@ -119,7 +120,7 @@ class _GenreScreenState extends State<GenreScreen> {
                                     height: 5.h,
                                   ),
                                   Text(
-                                    'Please select one, so I can customise your experience. Click NEXT when you are done.',
+                                    S.of(context).chooseGenreInstructionSubtitle,
                                     style: GoogleFonts.lora(
                                         fontSize: 12.sp,
                                         color: AppTheme.txtColor),

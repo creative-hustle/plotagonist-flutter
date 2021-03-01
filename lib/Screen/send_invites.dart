@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/tip_pageview.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class SendInvites extends StatefulWidget {
   @override
@@ -41,7 +42,7 @@ class _SendInvitesState extends State<SendInvites> {
                 Navigator.pop(context);
               },
               child: Text(
-                'Cancel',
+                S.of(context).cancel,
                 style: GoogleFonts.lato(
                     color: AppTheme.txtappBar,
                     fontSize: 17.sp,
@@ -51,7 +52,7 @@ class _SendInvitesState extends State<SendInvites> {
           ],
         ),
         middle: Text(
-          'Send Invites',
+          S.of(context).sendInvites,
           style: GoogleFonts.lato(
               color: Colors.black, fontSize: 17.sp, letterSpacing: 0.5),
         ),
@@ -61,7 +62,7 @@ class _SendInvitesState extends State<SendInvites> {
                 MaterialPageRoute(builder: (_) => TipPageView()));
           },
           child: Text(
-            'Skip',
+            S.of(context).skip,
             style: GoogleFonts.lato(
                 color: AppTheme.txtappBar, fontSize: 17.sp, letterSpacing: 0.5),
           ),
@@ -89,7 +90,7 @@ class _SendInvitesState extends State<SendInvites> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Do you want to collaborate with someone on this story?',
+                                    S.of(context).inviteTitle,
                                     style: GoogleFonts.lora(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14.sp,
@@ -100,8 +101,7 @@ class _SendInvitesState extends State<SendInvites> {
                                     height: 5.h,
                                   ),
                                   Text(
-                                    'You can invite Co-authors, Editors, Proofreaders who can '
-                                    'actively edit your story, or your fans, friends or family to help you with ideas via comments.',
+                                    S.of(context).inviteSubtitle,
                                     style: GoogleFonts.lora(
                                         fontSize: 12.sp,
                                         letterSpacing: 0.5,
@@ -188,7 +188,7 @@ class _SendInvitesState extends State<SendInvites> {
                             // important line
                             contentPadding: EdgeInsets.symmetric(
                                 vertical: 8.h, horizontal: 0.0),
-                            hintText: 'e.g. Stephen King',
+                            hintText: S.of(context).egStephenKing,
                             hintStyle: GoogleFonts.lato(
                                 color: Colors.grey, fontSize: 16.sp),
                             fillColor: AppTheme.appBarCoin,
@@ -219,7 +219,7 @@ class _SendInvitesState extends State<SendInvites> {
                             // important line
                             contentPadding: EdgeInsets.symmetric(
                                 vertical: 8.h, horizontal: 0.0),
-                            hintText: 'e.g. they@theiremail.com',
+                            hintText: S.of(context).egTheytheiremailcom,
                             hintStyle: GoogleFonts.lato(
                                 color: Colors.grey, fontSize: 16.sp),
                             fillColor: AppTheme.appBarCoin,
@@ -255,7 +255,7 @@ class _SendInvitesState extends State<SendInvites> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Edit permissions',
+                                  S.of(context).editPermissions,
                                   style: GoogleFonts.lato(
                                       color: AppTheme.txtColor,
                                       fontSize: 15.sp,
@@ -286,7 +286,7 @@ class _SendInvitesState extends State<SendInvites> {
                             color: AppTheme.appBarCoin,
                             border: Border.all(color: AppTheme.appBarCoin)),
                         child: Text(
-                          'ADD MORE',
+                          S.of(context).addMore,
                           style: GoogleFonts.lato(
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
@@ -308,7 +308,7 @@ class _SendInvitesState extends State<SendInvites> {
                             color: AppTheme.appBarCoin,
                             border: Border.all(color: AppTheme.appBarCoin)),
                         child: Text(
-                          'SEND INVITES',
+                          S.of(context).sendInvites,
                           style: GoogleFonts.lato(
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
@@ -429,7 +429,7 @@ showAlertDialog(BuildContext context) {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Read only',
+                                    S.of(context).readOnly,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp,
                                         color: AppTheme.txtColor2),
@@ -450,7 +450,7 @@ showAlertDialog(BuildContext context) {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Can Comment',
+                                    S.of(context).canComment,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp,
                                         color: AppTheme.txtColor2),
@@ -471,7 +471,7 @@ showAlertDialog(BuildContext context) {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Can create entries',
+                                    S.of(context).canCreateEntries,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp,
                                         color: AppTheme.txtColor2),
@@ -492,7 +492,7 @@ showAlertDialog(BuildContext context) {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Can edit entries',
+                                    S.of(context).canEditEntries,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp,
                                         color: AppTheme.txtColor2),
@@ -513,7 +513,7 @@ showAlertDialog(BuildContext context) {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Can delete entries',
+                                    S.of(context).canDeleteEntries,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp,
                                         color: AppTheme.txtColor2),
@@ -534,7 +534,7 @@ showAlertDialog(BuildContext context) {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Collaborator Permissions',
+                              S.of(context).collaboratorPermissions,
                               style: GoogleFonts.lato(
                                   fontSize: 17.sp, fontWeight: FontWeight.bold,letterSpacing: 0.5),
                             ),
@@ -580,7 +580,7 @@ showAlertDialog(BuildContext context) {
                                       border:
                                           Border.all(color: AppTheme.appBarCoin)),
                                   child: Text(
-                                    'SAVE SELECTION',
+                                    S.of(context).saveSelection,
                                     style: GoogleFonts.lato(
                                         fontSize: 16.sp, color: Colors.white),
                                   ),

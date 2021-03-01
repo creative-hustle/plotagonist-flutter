@@ -5,6 +5,7 @@ import 'package:plotagonist/Models/sub_genre_model.dart';
 import 'package:plotagonist/Screen/plot_summary.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class SubGenreScreen extends StatefulWidget {
   final genre;
@@ -51,7 +52,7 @@ class _SubGenreScreenState extends State<SubGenreScreen> {
             }
           },
           label: Text(
-            'NEXT STEP',
+            S.of(context).nextStep,
             style: GoogleFonts.lato(
                 fontSize: 16.sp,
                 color: _selectedIndex >= 0 ? Colors.white : Colors.grey,
@@ -77,7 +78,7 @@ class _SubGenreScreenState extends State<SubGenreScreen> {
           ],
         ),
         middle: Text(
-          'Choose SubGenre',
+          S.of(context).chooseSubgenre,
           style:  GoogleFonts.lato(color: Colors.black, fontSize: 17.sp,letterSpacing: 0.5),
         ),
         trailing: GestureDetector(
@@ -86,7 +87,7 @@ class _SubGenreScreenState extends State<SubGenreScreen> {
                 context, MaterialPageRoute(builder: (_) => PlotSummary()));
           },
           child: Text(
-            'Skip',
+            S.of(context).skip,
             style:  GoogleFonts.lato(color: AppTheme.txtappBar, fontSize: 17.sp,letterSpacing: 0.5),
           ),
         ),
@@ -110,7 +111,7 @@ class _SubGenreScreenState extends State<SubGenreScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'What is the subgenre of your novel?',
+                                    S.of(context).SubgenreInstructionTitle,
                                     style: GoogleFonts.lora(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14.sp,
@@ -122,7 +123,7 @@ class _SubGenreScreenState extends State<SubGenreScreen> {
                                     height: 5.h,
                                   ),
                                   Text(
-                                    'Please select one, so I can show you genre relevant tips. Click NEXT when you are done.',
+                                    S.of(context).SubgenreInstructionSubtitle,
                                     style: GoogleFonts.lora(
                                         fontSize: 12.sp,
                                         letterSpacing: 0.5,

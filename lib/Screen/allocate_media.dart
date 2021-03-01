@@ -7,6 +7,7 @@ import 'package:plotagonist/Screen/start_screen.dart';
 import 'package:plotagonist/Utils/size_config.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class AllocateMedia extends StatefulWidget {
   @override
@@ -90,7 +91,7 @@ class _AllocateMediaState extends State<AllocateMedia> {
                   children: [
                     Center(
                       child: Text(
-                        'To which card(s) do you want to allocate this media item?',
+                        S.of(context).WhichCardInstruction,
                         style: GoogleFonts.lato(
                             fontSize: 15.sp,
                             fontStyle: FontStyle.italic,
@@ -130,7 +131,7 @@ class _AllocateMediaState extends State<AllocateMedia> {
                     Row(
                       children: [
                         Text(
-                          'ALL CARDS',
+                          S.of(context).allCards,
                           style: GoogleFonts.lato(
                               color: AppTheme.appBarCoin,
                               letterSpacing: 0.5,
@@ -188,7 +189,7 @@ class _AllocateMediaState extends State<AllocateMedia> {
                           BorderSide(color: Colors.transparent, width: 0),
                       borderRadius: BorderRadius.circular(4.r),
                     ),
-                    hintText: 'Search cards',
+                    hintText: S.of(context).searchCards,
                     hintStyle: GoogleFonts.lato(
                         fontSize: 13.sp,
                         letterSpacing: 0.5,
@@ -300,9 +301,9 @@ class _AllocateMediaState extends State<AllocateMedia> {
                                                   color: AppTheme.appBarCoin)),
                                           child: Text(
                                             _selectedIndex == index
-                                                ? 'SELECTED'
-                                                : 'SELECT',
-                                            style: TextStyle(
+                                                ? S.of(context).selected
+                                                : S.of(context).select,
+                                            style: GoogleFonts.lato(
                                               color: _selectedIndex == index
                                                   ? Colors.white
                                                   : Colors.black,
@@ -357,7 +358,7 @@ class _AllocateMediaState extends State<AllocateMedia> {
                       color: AppTheme.appBarCoin,
                       border: Border.all(color: AppTheme.appBarCoin)),
                   child: Text(
-                    'CONTINUE',
+                    S.of(context).continueBtn,
                     style: GoogleFonts.lato(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,

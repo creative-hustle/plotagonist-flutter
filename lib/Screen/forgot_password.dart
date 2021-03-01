@@ -3,11 +3,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plotagonist/Screen/contact_support.dart';
 import 'package:plotagonist/Screen/register.dart';
 import 'package:plotagonist/Screen/reset_code.dart';
 import 'package:plotagonist/Utils/styling.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:plotagonist/generated/l10n.dart';
 
 class ForgotPassword extends StatefulWidget {
   @override
@@ -56,8 +58,8 @@ class _NewFormState extends State<NewForm> {
                   children: [
                     Align(
                       child: Text(
-                        "RESET PASSWORD",
-                        style: TextStyle(
+                        S.of(context).resetPassword,
+                        style: GoogleFonts.lato(
                           color: Color(
                             0xff4c4c4c,
                           ),
@@ -86,8 +88,8 @@ class _NewFormState extends State<NewForm> {
                               width: 4.5.w,
                             ),
                             Text(
-                              "BACK",
-                              style: TextStyle(
+                              S.of(context).back,
+                              style: GoogleFonts.lato(
                                 color: Color(
                                   0xff4c4c4c,
                                 ),
@@ -137,15 +139,14 @@ class _NewFormState extends State<NewForm> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "Please enter your email address you have registered with. We'll send you an email with a 6-digit reset code.\nAfter entering the reset code, then you'll be able to set up  a new password.",
-                    style: TextStyle(
+                    S.of(context).reset_password_instructions,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xff4C4C4C,
                       ),
                       fontSize: ScreenUtil().setSp(15),
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.italic,
-                      fontFamily: "Lato",
                       height: 1.4,
                       letterSpacing: 0.5,
                     ),
@@ -167,14 +168,13 @@ class _NewFormState extends State<NewForm> {
                 Container(
                   height: ScreenUtil().setHeight(24),
                   child: Text(
-                    "EMAIL ADDRESS",
-                    style: TextStyle(
+                    S.of(context).emailAddress,
+                    style: GoogleFonts.lato(
                       color: Color(
                         0xffed8a19,
                       ),
                       fontSize: ScreenUtil().setSp(12),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
                     ),
                   ),
                 ),
@@ -182,21 +182,19 @@ class _NewFormState extends State<NewForm> {
                   height: ScreenUtil().setHeight(30),
                   child: TextFormField(
                     maxLines: 1,
-                    style: TextStyle(
+                    style: GoogleFonts.lato(
                       fontSize: ScreenUtil().setSp(16),
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Lato",
-                      letterSpacing: 0.5538461208343506,
+                      letterSpacing: 0.5,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'you@youremail.com',
-                      hintStyle: TextStyle(
+                      hintText: S.of(context).youyouremailcom,
+                      hintStyle: GoogleFonts.lato(
                         color: Color(
                           0xffababab,
                         ),
                         fontSize: ScreenUtil().setSp(16),
                         fontWeight: FontWeight.w400,
-                        fontFamily: "Lato",
                         letterSpacing: 0.5,
                       ),
                       enabledBorder: new UnderlineInputBorder(
@@ -239,13 +237,12 @@ class _NewFormState extends State<NewForm> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: Text(
-                          "SEND RESET CODE",
-                          style: TextStyle(
+                          S.of(context).sendResetCode,
+                          style: GoogleFonts.lato(
                             color: Colors.white,
                             fontSize: ScreenUtil()
                                 .setSp(15, allowFontScalingSelf: false),
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Lato",
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -264,39 +261,37 @@ class _NewFormState extends State<NewForm> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text:
-                                'We couldn’t find an account with this email address. Please try with a different email or the social logins. If all fails, please ',
-                            style: TextStyle(
+                            text: S.of(context).resetPasswordEmailNotFoundError,
+                            style: GoogleFonts.lato(
                               color: Color(
                                 0xff4C4C4C,
                               ),
                               fontSize: ScreenUtil().setSp(15),
                               fontWeight: FontWeight.w400,
                               fontStyle: FontStyle.italic,
-                              fontFamily: "Lato",
                               height: 1.4,
                               letterSpacing: 0.5,
                             ),
                           ),
                           TextSpan(
-                            text: 'contact support.',
-                            style: new TextStyle(
+                            text: S.of(context).contactSupport,
+                            style: GoogleFonts.lato(
                               color: Color(
                                 0xffed8a19,
                               ),
                               fontSize: ScreenUtil().setSp(15),
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.italic,
-                              fontFamily: "Lato",
                               height: 1.4,
                               letterSpacing: 0.5,
                             ),
-                            recognizer: TapGestureRecognizer()..onTap = () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => ContactSupport()));
-
-
-                            },
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => ContactSupport()));
+                              },
                           ),
                         ],
                       ),
