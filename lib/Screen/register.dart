@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/screen_util.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:plotagonist/Screen/finish_social_register.dart';
 import 'package:plotagonist/Screen/login.dart';
 import 'package:plotagonist/generated/l10n.dart';
 
@@ -341,13 +342,23 @@ class NewForm extends StatelessWidget {
                           width: ScreenUtil().setWidth(42),
                           height: ScreenUtil().setHeight(42),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FinishRegister()));
+                        },
                       ),
                       SizedBox(
                         width: ScreenUtil().setWidth(10),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FinishRegister()));
+                        },
                         child: Image.asset(
                           'assets/images/google_logo.png',
                           width: ScreenUtil().setWidth(42),
@@ -358,7 +369,12 @@ class NewForm extends StatelessWidget {
                         width: ScreenUtil().setWidth(10),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FinishRegister()));
+                        },
                         child: Image.asset(
                           'assets/images/twitter_logo.png',
                           width: ScreenUtil().setWidth(42),
@@ -369,7 +385,12 @@ class NewForm extends StatelessWidget {
                         width: ScreenUtil().setWidth(10),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FinishRegister()));
+                        },
                         child: Image.asset(
                           'assets/images/apple_logo.png',
                           width: ScreenUtil().setWidth(42),

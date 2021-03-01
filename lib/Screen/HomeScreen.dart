@@ -217,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Colors.white),
                               child: Center(
                                 child: Text(
-                                  'YOUR PLOTS',
+                                  S.of(context).yourPlots,
                                   style: GoogleFonts.lato(
                                     color: AppTheme.floatingColor,
                                     fontSize: 11.sp,
